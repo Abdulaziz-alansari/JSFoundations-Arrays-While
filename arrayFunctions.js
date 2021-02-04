@@ -9,11 +9,10 @@
  * isArrayLengthOdd([1, 2, 3, 4]) -> flase
  */
 function isArrayLengthOdd(numbers) {
-  let num1 = numbers.length;
+  
+return numbers.length % 2==1;
+}
 
-  if (num1 % 2==1){
-      return true;
-   } else return false;
  
  
  /**
@@ -43,12 +42,14 @@ function isArrayLengthOdd(numbers) {
   * addLailaToArray(["Mshary", "Hasan"]) -> ["Mshary", "Hasan", "Laila"]
   */
  function addLailaToArray(instructors) {
-   let instructors = ["Mshary","Hasan", "Laila"];
-   let //// i get confused with this part ///
 
-
-
+   instructors.push("Laila");
+   return instructors
  }
+
+
+
+ 
  
  /**
   * eliminateTeam(teams):
@@ -75,7 +76,7 @@ function isArrayLengthOdd(numbers) {
  function secondHalfOfArrayIfItIsEven(fruits) {
    if( fruits.length %2==0){
        return fruits.slice(2)}
-       eles 
+       else
        return [];
 
    
@@ -96,11 +97,11 @@ function isArrayLengthOdd(numbers) {
   * - Use string method .endsWith()
   */
  function youGottaCalmDown(shout) {
-     while (shout.endswith("!!!")){
-         shout=shout.slice(0, -1);
-         return shout;
-     };
- }
+     
+  while (shout.endsWith("!!!")) 
+  {     shout = shout.slice(0, -2);   
+  }   
+  return shout; }
  
  module.exports = {
    isArrayLengthOdd,
@@ -111,4 +112,4 @@ function isArrayLengthOdd(numbers) {
    youGottaCalmDown,
  
 
- }
+ };
